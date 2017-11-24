@@ -1,0 +1,47 @@
+<template format="4"
+    revision="1"
+    name="MVP代码生成"
+    description="快速生成MVP代码，包含Fragment、Presenter、Model、Contarct">
+    
+    <category value="MVP" />
+    <formfactor value="Mobile" />
+    
+    <parameter id="className"
+    name="类名关键字"
+    type="string"
+    constraints="class|unique|nonempty"
+    default="Main"
+    help="这是类名关键字，生成格式为：类名关键字+固定的后缀（如：MainFragment）"/>
+    
+	<parameter id="hasRecyclerView"
+	name="RecyclerView"
+	type="boolean"
+	default="false"
+	help="是否含有RecyclerView"
+	/>
+	
+	<parameter id="hasPtrFrameLayout"
+	name="PtrFrameLayout"
+	type="boolean"
+	default="false"
+	help="是否含有下拉刷新PtrFrameLayout"
+	/>
+	
+	<parameter id="hasStateManager"
+	name="StateManager"
+	type="boolean"
+	default="false"
+	help="是否含有状态页StateManager"
+	/>
+	
+	<parameter id="hasStateManager"
+	name="StateManager"
+	type="boolean"
+	default="false"
+	help="是否含有状态页StateManager"
+	/>
+   
+    <globals file="globals.xml.ftl" />
+    <execute file="recipe.xml.ftl" />
+	
+</template>
